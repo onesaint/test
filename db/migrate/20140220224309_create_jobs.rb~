@@ -1,0 +1,24 @@
+class CreateJobs < ActiveRecord::Migration
+<<<<<<< HEAD
+  def up
+=======
+  def change
+>>>>>>> 645b7dd73df2dbf15eb078345caa3d168f8cb400
+    create_table :jobs do |t|
+      t.string :company_name
+      t.string :province
+      t.string :position
+      t.integer :numb
+      t.string :qualification
+      t.date :start_date
+      t.date :deadline
+      t.string :link
+
+      t.timestamps
+    end
+  end
+
+  def down
+    drop_table :jobs
+  end
+end

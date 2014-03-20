@@ -1,0 +1,53 @@
+
+%h1#head
+  %div#logo
+    %div#message
+    %div
+  %div
+
+
+#body 
+  %h1 Edit
+  = form_tag monkey_path(@jobs), :method =>:put do
+
+    = label :job, :company_name, 'company name'
+    %br
+    = text_field :jobs, 'company_name'
+    %br
+    %br
+    = label :job, :province, 'location'
+    %br
+    = text_field :jobs, 'province'
+    %br
+    %br
+    = label :job, :position, 'position'
+    %br
+    = text_field :jobs, 'position'
+    %br
+    %br
+    = label :job, :qualification, 'qualification'
+    %br
+    = text_field :jobs, 'qualification'
+    %br
+    %br
+    = label :job, :numb, 'number of admission'
+    %br
+    = text_field :jobs, 'numb'
+    %br
+    %br
+    = label :job, :start_date, 'Start Date'
+    = date_select :jobs, :start_date
+    %br
+    = label :job, :deadline, 'Deadline'
+    = date_select :jobs, :deadline
+    %br
+    %br
+    = label :job, :link, 'link'
+    %br
+    = text_field :jobs ,'link'
+    = submit_tag 'Save Changes'
+
+%h1
+
+%div#footer
+%div
